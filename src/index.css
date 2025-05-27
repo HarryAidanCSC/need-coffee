@@ -1,0 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 109%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(243,57,42);
+  color: #f1f0f0;
+}
