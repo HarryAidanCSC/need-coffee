@@ -8,13 +8,12 @@
     justify-content: space-between;
     padding: 0 2.5rem;
     background: rgba(243,57,42,0.92);
-    border-radius: 1.2rem 1.2rem 2.2rem 2.2rem;
     box-shadow: 0 4px 18px rgba(243,57,42,0.10), 0 1.5px 0 #fff2;
     position: relative;
     z-index: 10;
 }
 
-.header-section > a {
+.header-link {
     color: #fdf1d5;
     text-decoration: none;
     font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
@@ -22,7 +21,7 @@
     font-size: 1.18rem;
     letter-spacing: 0.04em;
     margin: 0 1.2rem;
-    padding: 0.1rem 1.1rem; /* Reduced vertical padding */
+    padding: 0.1rem 1.1rem;
     border-radius: 1.2rem;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s, padding 0.2s;
     position: relative;
@@ -32,7 +31,7 @@
     align-items: center;
 }
 
-.header-section > a:hover {
+.header-link:hover {
     background: #fdf1d5;
     color: #c1440e;
     box-shadow: 0 2px 8px #fff3;
@@ -40,9 +39,9 @@
     padding-bottom: 0.15rem;
 }
 
-.header-section > img {
+.nonheader-link {
     width: auto;
-    height: 2.7rem;
+    height: 2.9rem;
     object-fit: cover;
     display: block;
     margin-left: 1.5rem;
@@ -50,7 +49,34 @@
     border-radius: 0.7rem;
 }
 
-.header-section > img:hover {
+.nonheader-link:hover {
     filter: brightness(0.3);
     transform: scale(1.07);
 }
+
+.header-title-link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 2.1rem;
+    letter-spacing: 0.08em;
+    margin: 0 2.2rem;
+    padding: 0.2rem 1.6rem;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 99;           /* Ensure always above other header items */
+    background: none;
+    box-shadow: none;
+    white-space: nowrap;   /* Prevent wrapping */
+    transition: 
+        color 0.25s cubic-bezier(.4,2,.6,1)
+}
+
+.header-title-link:hover {
+    filter: brightness(0.2);
+    cursor: pointer;
+}
+

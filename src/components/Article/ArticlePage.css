@@ -1,0 +1,299 @@
+/* Main background with a soft, elegant gradient and subtle texture overlay */
+main {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(120deg, #f3392a 0%, #fff3 100%);
+    background-blend-mode: lighten;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Decorative blurred circles for depth */
+main::before, main::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(48px);
+    opacity: 0.18;
+    z-index: 0;
+}
+main::before {
+    width: 340px;
+    height: 340px;
+    left: -120px;
+    top: 80px;
+    background: radial-gradient(circle, #f3392a 0%, #fff3 100%);
+}
+main::after {
+    width: 260px;
+    height: 260px;
+    right: -100px;
+    bottom: 60px;
+    background: radial-gradient(circle, #c1440e 0%, #fff3 100%);
+}
+
+.article-title {
+    font-size: 3.6rem;
+    font-weight: 900;
+    color: #222;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 3.2rem 0 2.2rem 0;
+    line-height: 1.13;
+    background: linear-gradient(90deg, #fdf2d9 0%, #f7e7d3 100%);
+    border-radius: 2.5rem;
+    padding: 2.2rem 4.5rem;
+    display: block;
+    max-width: 1400px;
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 48px #c1440e22, 0 2px 0 #e8d7bb;
+    position: static;
+    z-index: 2;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    border: 3px solid #f7b500;
+    letter-spacing: 0.04em;
+    text-shadow:
+        0 2px 12px #fdf2d9cc,
+        0 1px 0 #fff,
+        0 0.5px 0 #f7b500;
+    overflow: visible;
+    min-width:  88vw;
+}
+
+.article-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 6px;
+    margin: 1.2rem auto 0 auto;
+    background: linear-gradient(90deg, #f7b500 0%, #c1440e 100%);
+    border-radius: 3px;
+    opacity: 0.85;
+}
+
+/* Main content layout */
+.article-main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+    justify-content: center;
+    margin: 0 auto 3.5rem auto;
+    max-width: 1400px;
+    width: 95rem;
+    min-width:  88vw;
+    background: rgba(253, 242, 217, 0.98);
+    border-radius: 2.5rem;
+    box-shadow: 0 12px 48px 0 rgba(80,0,0,0.13), 0 2px 0 #fff2;
+    padding: 2rem 3.5rem 4rem 3.5rem;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden;
+}
+
+/* Article left column */
+.article-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.7rem;
+    width: 440px;
+    min-width: 24rem;
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+    z-index: 3;
+    height: fit-content;
+    max-height: calc(100vh - 6rem);
+    overflow: hidden;
+}
+
+/* Article image with elegant shadow */
+.article-image {
+    flex: 0 0 420px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 1.7rem;
+    margin: 0;
+    object-fit: cover;
+    box-shadow: 0 12px 24px rgba(193, 68, 14, 0.15), 0 4px 8px rgba(193, 68, 14, 0.1);
+    background: #fff;
+    min-height: 320px;
+    z-index: 2;
+}
+
+/* Article meta info (type, date, location) */
+.article-meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 0.8rem;
+    margin-top: 0.2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.article-type {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #f3392a 60%, #c1440e 100%);
+    border-radius: 1.1rem;
+    padding: 0.38rem 1.3rem;
+    letter-spacing: 0.11em;
+    box-shadow: 0 2px 8px #c1440e33;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.article-date {
+    font-size: 1.04rem;
+    color: #8b4513;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    background: linear-gradient(90deg, #fff4e6 0%, #ffe4b3 100%);
+    border-radius: 0.7rem;
+    padding: 0.22rem 0.9rem;
+    box-shadow: 0 2px 8px rgba(255, 228, 179, 0.4);
+    display: inline-block;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    border: 1px solid #f4d03f;
+}
+
+.article-location {
+    font-size: 1.04rem;
+    color: #7c4a1e;
+    font-weight: 500;
+    border-radius: 0.7rem;
+    padding: 0.22rem 0.9rem;
+    display: inline-block;
+    margin-top: 0;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.article-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #d68910;
+    background: linear-gradient(90deg, #fff9e6 0%, #ffeaa7 100%);
+    border-radius: 1.0rem;
+    padding: 0.35rem 0.7rem;
+    box-shadow: 0 4px 12px rgba(255, 234, 167, 0.5);
+    text-shadow: 0 2px 8px #c1440e33, 0 1px 0 #e8d7bb;
+    min-width: 6rem;
+    justify-content: flex-start;
+    letter-spacing: 0.09em;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    margin-left: 0rem;
+    border: 2px solid #f39c12;
+}
+
+.article-rating-value {
+    font-weight: 700;
+    color: #a05a2c;
+    margin-right: 0.5rem;
+    font-size: 1.0rem;
+    letter-spacing: 0.03em;
+}
+
+.article-star {
+    font-size: 1.4rem;
+    margin-right: 0.05rem;
+    vertical-align: middle;
+    font-family: 'Segoe UI Symbol', 'Arial', sans-serif;
+    background: linear-gradient(90deg, #f7b500 60%, #ffe29f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.article-star.empty {
+    background: none;
+    color: #e0c9a6;
+    -webkit-text-fill-color: #e0c9a6;
+}
+
+.article-text {
+    flex: 1 1 0;
+    color: #3a2a1a;
+    font-size: 1.18rem;
+    text-align: left;
+    background: none;
+    padding: 0 0.5rem;
+    min-width: 0;
+    z-index: 2;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.article-text p {
+    color: #5d4037;
+    margin-bottom: 0.1rem;
+    line-height: 1.8;
+    font-size: 1.15em;
+    letter-spacing: 0.01em;
+    border-radius: 0.7rem;
+    padding: 0rem 1.1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.article-text p strong {
+    color: #c1440e;
+    font-weight: 700;
+}
+
+.article-text p em {
+    color: #b86b2b;
+    font-style: italic;
+}
+
+/* Map section styling */
+.article-map-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(247, 181, 0, 0.2);
+}
+
+.map-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #c1440e;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+}
+
+.map-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(193, 68, 14, 0.2) !important;
+}
+
+.map-caption {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #7c4a1e;
+    font-weight: 600;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Mapbox popup styling */
+.mapboxgl-popup-content {
+    border-radius: 0.8rem !important;
+    box-shadow: 0 4px 16px rgba(193, 68, 14, 0.2) !important;
+    border: 2px solid #f7b500 !important;
+}
