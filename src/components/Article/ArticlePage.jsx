@@ -6,10 +6,8 @@ import FooterBoard from '../FooterBoard'
 
 const ArticlePage = () => {
     const { id } = useParams();
-    const [post, setPost] = useState(null);
-
-    useEffect(() => {
-        fetch('/Articles/all_articles.json')
+    const [post, setPost] = useState(null);    useEffect(() => {
+        fetch(`${import.meta.env.BASE_URL}Articles/all_articles.json`)
             .then(res => res.json())
             .then(data => {
                 const found = data.find(article => article.uuid === id);
@@ -54,10 +52,8 @@ const ArticlePage = () => {
                 {stars}
             </div>
         );
-    }
-
-    const { title, alt, date, markdownText, jpgFileName, ranking, type, location } = post;
-    const imgSrc = `/${jpgFileName}`;
+    }    const { title, alt, date, markdownText, jpgFileName, ranking, type, location } = post;
+    const imgSrc = `${import.meta.env.BASE_URL}${jpgFileName}`;
     
     // Function to get type styling based on category
     const getTypeStyle = (type) => {

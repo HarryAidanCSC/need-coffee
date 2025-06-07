@@ -18,10 +18,8 @@ const BlogPage = () => {
         if (location.state?.initialFilter) {
             setFilter(location.state.initialFilter);
         }
-    }, [location.state]);
-
-    useEffect(() => {
-        fetch('/Articles/all_articles.json')
+    }, [location.state]);    useEffect(() => {
+        fetch(`${import.meta.env.BASE_URL}Articles/all_articles.json`)
             .then(res => res.json())
             .then(data => {
                 setArticles(data);
@@ -172,8 +170,6 @@ const BlogPage = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* Results Counter - Now on the right */}
                     <div className="results-counter">
                         Showing {filteredArticles.length} article{filteredArticles.length !== 1 ? 's' : ''}
                         {filter !== 'all' && ` for "${filter}"`}
@@ -189,10 +185,9 @@ const BlogPage = () => {
                             key={article.uuid} 
                             to={`/article/${article.uuid}`} 
                             className="article-card"
-                        >
-                            {article.jpgFileName && (
+                        >                            {article.jpgFileName && (
                                 <img 
-                                    src={`/${article.jpgFileName}`} 
+                                    src={`${import.meta.env.BASE_URL}${article.jpgFileName}`} 
                                     alt={article.alt} 
                                     className="article-card-image"
                                 />

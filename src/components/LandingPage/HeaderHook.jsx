@@ -6,7 +6,7 @@ const HeaderHook = () => {
 
     return (
         <section className='header-hook-container'>
-            <h2>Freshly Brewed Blog Posts</h2>
+            <h2>Fresh Blog Posts</h2>
             <Link to="/blog" className="header-link"><h3>Read More</h3></Link>
         </section>
     );

@@ -3,10 +3,8 @@ import './LatestPosts.css'
 import { Link } from 'react-router-dom'
 
 const LatestPosts = () => {
-    const [latestPostData, setLatestPostData] = useState([]);
-
-    useEffect(() => {
-        fetch("/Articles/all_articles.json")
+    const [latestPostData, setLatestPostData] = useState([]);    useEffect(() => {
+        fetch(`${import.meta.env.BASE_URL}Articles/all_articles.json`)
             .then(res => res.json())
             .then(setLatestPostData);
     }, []);
@@ -47,12 +45,11 @@ const LatestPosts = () => {
             rankingColor = "#7c4a1e";
         } else if (ranking >= 2.5) {
             rankingBg = "linear-gradient(90deg, #ffd6d6 60%,rgb(250, 177, 177) 100%)";
-            rankingColor = "#b71c1c";
-        } else {
+            rankingColor = "#b71c1c";        } else {
             rankingBg = "linear-gradient(90deg, #e57373 60%,rgb(246, 165, 173) 100%)";
             rankingColor = "#fff";
         }
-        const imgSrc = `${img}`
+        const imgSrc = `${import.meta.env.BASE_URL}${img}`
 
         return (
             <Link to={`/article/${id}`} className='post-container' style={{ textDecoration: 'none' }}>
