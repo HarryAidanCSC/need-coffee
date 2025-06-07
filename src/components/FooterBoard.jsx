@@ -14,7 +14,7 @@ const FooterBoard = () => {
                     rel="noopener noreferrer"
                     aria-label="GitHub"
                 >
-                    <FaGithub size={26} />
+                    <FaGithub size={26} /> ? {/* How meta */}
                 </a>
                 <a
                     href="https://www.linkedin.com/in/harry-mancinelli-830430222/"

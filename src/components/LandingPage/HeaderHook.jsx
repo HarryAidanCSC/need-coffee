@@ -2,8 +2,6 @@ import './HeaderHook.css';
 import { Link } from 'react-router-dom'
 
 const HeaderHook = () => {
-    const preventDefault = (e) => e.preventDefault();
-
     return (
         <section className='header-hook-container'>
             <h2>Fresh Blog Posts</h2>

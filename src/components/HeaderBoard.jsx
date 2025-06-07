@@ -3,7 +3,6 @@ import searchIcon from './../assets/search-icon1.png';
 import { Link } from 'react-router-dom';
 
 const HeaderBoard = () => {
-    const preventDefault = (e) => e.preventDefault();
 
     return (
         <section className='header-section'>
