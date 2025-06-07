@@ -1,0 +1,11 @@
+Alright, settle in, because we need to talk about the 'flat white' from Dunkin' Donuts. And I use those inverted commas with the kind of disdain usually reserved for a particularly egregious tax loophole or a politician's apology.
+
+Now, I approach coffee with a certain... reverence. It's a craft. A science. A delicate dance between bean, water, and milk. What I received from Dunkin' was less a dance, and more a clumsy stumble in the dark, ending with a face-plant into a puddle of lukewarm regret.
+
+Let's start with the name itself: "Flat White." A bold claim. A promise, even. The flat white, in its purest form, is a thing of beauty – velvety milk, perfectly integrated, a subtle sweetness, and a robust espresso backbone. What Dunkin' delivered was, frankly, an insult to the very concept.
+
+The visual? Imagine if a cloud had a bad day, then got run over by a truck, and then someone tried to scoop it into a cup with a rusty shovel. There was no 'flatness' to speak of, unless you count the flatness of my soul after the first sip. It was a chaotic, bubbly mess, like a toddler's bathwater after they've discovered the joy of splashing. The colour was less 'rich, creamy off-white' and more 'beige despair.'
+
+And the taste. Oh, the taste. It was a lukewarm, watery whisper of what coffee might have been, had it not been tragically murdered before it reached my lips. The espresso, if you can call it that, was utterly lost, drowned in a sea of what I can only assume was milk that had given up on life. There was no texture, no body, no discernible flavour beyond a vague, sugary emptiness. It was the kind of beverage that makes you question your life choices, your priorities, and whether humanity truly deserves to continue.
+
+In summary, if you're looking for a flat white, go literally anywhere else. Or better yet, just drink water. It'll be more satisfying, and significantly less offensive. This wasn't a flat white; it was a crime against coffee, and frankly, I'm not sure I'll ever recover.
