@@ -10,10 +10,9 @@ Visit the live site: [https://harryaidancsc.github.io/need-coffee/](https://harr
 
 - **Dynamic Article Generation**: Automatically processes markdown files with metadata to create blog posts
 - **Interactive Filtering**: Filter articles by type (beans, brewing, coffee shops) and star rating
-- **Responsive Design**: Beautiful, modern UI that works on all devices
+- **Responsive Design**: Beautiful, modern UI that works on all devices (currently only optimised for desktop)
 - **Image Gallery**: Automatic image processing and optimization
 - **Star Rating System**: Rate and review coffee experiences
-- **Location Integration**: Map integration for coffee shop reviews
 - **Search & Sort**: Advanced filtering and sorting capabilities
 
 ## 🚀 Tech Stack
@@ -29,7 +28,7 @@ Visit the live site: [https://harryaidancsc.github.io/need-coffee/](https://harr
 
 ```
 src/
-├── components/           # React components
+├── components/          # React components
 │   ├── LandingPage/     # Homepage components
 │   ├── BlogPage/        # Blog listing and filtering
 │   ├── Article/         # Individual article view
@@ -43,12 +42,6 @@ public/
 ```
 
 ## 🛠️ Development
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- Python 3.x
-- Git
 
 ### Installation
 
@@ -94,13 +87,13 @@ The app will be available at `http://localhost:5173`
 3. **Example metadata structure**:
    ```json
    {
-     "title": "Amazing Coffee Shop Review",
-     "date": "2025-06-07",
+     "title": "Harry's Coffee Shop Review",
+     "date": "2025-05-24",
      "type": "coffee shop",
      "ranking": 4,
-     "location": "London, UK",
+     "location": "Cambridge, UK",
      "alt": "Coffee shop interior",
-     "quick_title": "Great Coffee",
+     "quick_title": "Great Coffee from Harry's Coffe Shop",
      "text": "Short description"
    }
    ```
@@ -153,25 +146,6 @@ Articles are managed through the file system:
 - Add new articles by creating folders with markdown and metadata
 - Images are automatically processed and optimized
 - The build process generates a combined JSON file for the frontend
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
