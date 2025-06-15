@@ -7,8 +7,3 @@ The first cup I tasted in Tuesday's early hours may have been my best home brew 
 In all fairness, as much as I loved this coffee, you are paying a pretty penny to get hold of it at £8.95 per 250g bag. As an amateur coffee drinker, I would find it difficult to tell you the complex distinctions between a similar coffee that is perhaps a few pounds cheaper. But let's be honest, at the very least you’re getting one hell of a delicious placebo effect, and at worst, a great-tasting bag of coffee. 
 
 This gets a full 5-star review. For helping reignite my enthusiasm for darker roasted coffee and a delicious profile, I would highly recommend picking this up.
-
-
-
-
-
