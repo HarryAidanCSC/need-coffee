@@ -8,7 +8,7 @@
     "type": "brewing",
     "ranking": 5,
     "title": "Aeropress Review",
-    "markdownText": "Ah, the AeroPress glass edition — now that’s what I call brewing with style! If Steve McManaman traded the football pitch for the coffee counter, I’m sure he’d say this:\n\n\"Mate, this AeroPress is like that perfect pass — smooth, slick, and right on target every single time. You pop your grounds in, give it a good press, and bam! — you’ve got a coffee so clean and sharp, it could slice through any sleepy morning like I used to slice through defenders on the pitch. \n\nIt’s quick, it’s efficient, and it never lets you down — kinda like me back in the day! Plus, the glass gives it that classy touch — none of that plastic business. It’s like drinking from a trophy cup, but filled with liquid gold. Five stars, no doubt. If coffee was football, this AeroPress would be the Man of the Match!\"",
+    "markdownText": "The famous AeroPress, conceived by Adam Adler in 2005, since becoming one of the most popular brewing methods across the world. If you've never heard of this thing before, get ready for a life-changing experience. For those of you who only have the attention span to read this far down, I absolutely recommend this to anyone looking at brewing coffee at home.\n\nSo how do we use this thing? Pop a filter paper into the basket, attach it to the main body, grind your beans (or use pre-ground beans - we don't mind here), pour them into the AeroPress, fill with water, and press away! Fantastic coffee in under 2 minutes without any of the gritty sludge and long wait associated with a cafetière. \n\nIf you're like me and prefer a strong cup, the AeroPress is going to beat out any cafetière or drip coffee out there - both of which have their merits. Now, I will admit that I have rarely tried coffee brewed with either a Moka pot or pour-over; however, I can clean my AeroPress in 20 seconds under the tap, quicker than any alternative unless you're the Flash.\n\nSo we have strong, fast, and tasty coffee in just a couple of minutes. Sounds like a poor man's espresso machine, right? To some extent - yes. This thing cost me about £25 compared to £100 for even the cheapest espresso machine on the market. I'll take the poor man's option any day...\n\nLet's keep things sensible; this won't give you an espresso shot like a fancy electric machine will, and you're making one cup at a time. Good luck serving a coffee to a room full of people with one of these. However, for a quick, tasty cup for myself in the morning, it is perfect. Machine-washable, compact, and cheap. \n\nYou might have heard the expression \"skill floor\" and \"skill ceiling\" before. If not, just understand that you do not need experience in coffee to be effective at this thing. If you think that means there is no room to experiment and flex your brewing skills, take a look at any one of the 60 national AeroPress competitions each year...\n\nA truly brilliant tool. At its price point I would highly recommend adding it to your brewing arsenal. ",
     "jpgFileName": "Articles/aeropress_0.webp",
     "uuid": "3746317213"
   },
@@ -27,19 +27,6 @@
   },
   {
     "alt": "rave coffee bag",
-    "date": "2025-03-05",
-    "quick_title": "Rave China Donka",
-    "text": "Medium roast Chinese beans",
-    "location": "China",
-    "type": "beans",
-    "ranking": 1,
-    "title": "Rave China Donka Coffee Review",
-    "markdownText": "Let’s not beat around the Chemex — China Dongka Nº 261 isn’t just a coffee, it’s an experience. The kind of brew that walks into your kitchen at 7am, adjusts its cufflinks, and says: \"You look like you need saving, sunshine.\"\n\nFirst off, yes — China. And if that surprised you, welcome to the future. Rave’s partnership with Indochina and Yunnan Coffee Traders has unlocked a flavour profile so elegant it practically bowed before entering my mug.\n\nThe aromatics? Like tea, but if tea had dreams of being a jazz musician and finally made it to the big stage. Delicate, floral, and slightly mysterious — like that one girl at the bar who reads Murakami and makes eye contact once.\n\nThen come the flavours:\n\nCitrus – not the screechy, sour kind. This is orchestral citrus, smooth and purposeful, like a lemon that went to finishing school.\n\nAlmond – subtle, creamy, like a background character that suddenly wins an Oscar.\n\nBrown sugar – rich and cozy, but not clingy. The kind of sweetness that calls you “darling” and means it.\n\nThis coffee is vibrant, clean, and sweet—kind of like if Christian Bale’s Bruce Wayne took a vacation to Yunnan, discovered enlightenment, and came back with a Chemex instead of a Batmobile.\n\nBottom line: Dongka Nº 281 doesn’t need to shout. It just shows up, takes your hand, and calmly rewrites your idea of what Chinese coffee can be.",
-    "jpgFileName": "Articles/rave_china_no261.jpg",
-    "uuid": "2181241943"
-  },
-  {
-    "alt": "rave coffee bag",
     "date": "2025-05-23",
     "quick_title": "Rave Wahana Estate",
     "text": "Medium roast Indonesian beans",
@@ -49,6 +36,19 @@
     "title": "Rave Wahana Estate Coffee Review",
     "markdownText": "Alright, let’s get into it.\n\nWahana Estate No.191 walks in with swagger — it’s from Indonesia, it’s estate-grown, it probably knows a thing or two about volcanic soil and artisanal fermentation. It wants to be the hero your morning deserves… but let’s be honest, it’s not quite Bruce Wayne — it’s more like that well-dressed guy in the boardroom who’s technically competent but never gets the girl.\n\nThe aroma? Earthy, woody, slightly mysterious — like the jungle floor after a tropical rain. Promising stuff. You lean in. You sip. And then… meh.\n\nIt’s interesting — yes. Complex? Arguably. But balanced? That’s where things start to wobble.\n\nWhat’s good:\nThat deep, brooding base — classic Indonesian body, syrupy and low-acid.\n\nNotes of dried fruit, cedar, maybe even a hint of tobacco — like it’s been aged in a wise old library somewhere near Lake Toba.\n\nBut here’s the rub:\nIt lacks spark. That flavour crescendo you’re hoping for? It never quite arrives. The finish? A little flat. Like a monologue that trails off mid-sentence.\n\nIf you don’t dial in the brew perfectly, it can turn muddy, even murky. The kind of cup that says \"rustic\" but ends up just tasting confused.\n\nLet’s not be unfair — Wahana No.191 has merit. It’s just not the leading role. It’s the gritty side character with potential that never quite lands the punchline. Worth trying? Absolutely. Worth raving about? Maybe not without a bit of Batcave-level brew tuning.",
     "jpgFileName": "Articles/rave_indonesia_no293.jpg",
+    "uuid": "2181241943"
+  },
+  {
+    "alt": "rave coffee bag",
+    "date": "2025-06-15",
+    "quick_title": "Rave Asali AB",
+    "text": "Dark roast Kenyan beans",
+    "location": "Nyeri County, Kenya",
+    "type": "beans",
+    "ranking": 5,
+    "title": "Rave Kenya Asali AB Coffee Review",
+    "markdownText": "I’ve been a big fan of Rave since signing up to their subscription in early May. I'm now on my third bag, and this might just be my favourite yet. I generally find myself leaning towards a lighter roast these days, but this dark Kenyan AB Asali may have just flipped the script. \n\nWe have here a speciality grade coffee from Nyeri County in Kenya. I’ll preface this review with the fact that I am a devout, AeroPressed black coffee drinker at home - sorry to any milk fans out there.\n\nThe first cup I tasted in Tuesday's early hours may have been my best home brew yet. Having just finished a sweet breakfast, following up with this coffee was a genius move (if you can pair it with a pastry or even some cereal, you’re in for a treat). We’ve got a full-bodied, caramelly profile with this one. As someone who’s generally tasted South American beans, I will definitely be trying some more from Africa in the near future. \n\nIn all fairness, as much as I loved this coffee, you are paying a pretty penny to get hold of it at £8.95 per 250g bag. As an amateur coffee drinker, I would find it difficult to tell you the complex distinctions between a similar coffee that is perhaps a few pounds cheaper. But let's be honest, at the very least you’re getting one hell of a delicious placebo effect, and at worst, a great-tasting bag of coffee. \n\nThis gets a full 5-star review. For helping reignite my enthusiasm for darker roasted coffee and a delicious profile, I would highly recommend picking this up.\n\n\n\n\n\n",
+    "jpgFileName": "Articles/rave_kenya_no301.jpg",
     "uuid": "1958682846"
   },
   {
