@@ -2,25 +2,31 @@ import './LandingPage.css'
 import HeaderTitle from './HeaderTitle'
 import HeaderBoard from './../HeaderBoard'
 import FooterBoard from './../FooterBoard'
-import HeaderHook from './HeaderHook'
 import HeaderTopics from './HeaderTopics'
 import LatestPosts from './LatestPosts'
+import HeaderHook from './HeaderHook'
 
 const LandingPage = () => {
     return (
-        <div className='landing-page-container'>
+        <div className='landing-page'>
             <HeaderBoard />
-            <header className='header-container'>
-                <HeaderTitle /> 
-                <section className='header-content-container'>  
-                    <HeaderHook />
+            
+            <main>
+                <div className="hero-wrapper">
+                    <HeaderTitle />
+                </div>
+                
+                <section className="topics-section">
                     <HeaderTopics />
                 </section>
-            </header>
-            <section className='latest-posts-container'>
-                <LatestPosts />
-                <FooterBoard />
-            </section>
+
+                <section className="latest-section">
+                    <HeaderHook />
+                    <LatestPosts />
+                </section>
+            </main>
+
+            <FooterBoard />
         </div>
     )
 }

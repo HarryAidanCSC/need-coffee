@@ -1,42 +1,65 @@
-.header-title {
+.hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    width: 38%;
-    min-width: 320px;
-    max-width: 520px;
-    padding: 3rem 1.5rem 2.5rem 1.5rem;
-    border-radius: 2.5rem;
-    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 6rem 4rem;
     position: relative;
     z-index: 2;
     overflow: hidden;
+    background: transparent;
+    border-radius: 0;
 }
 
-.header-title img {
-    height: auto;
-    width: 15rem;
-    margin-bottom: 0.4rem;
-    z-index: 2;
+.hero-content {
+    max-width: 600px;
+    animation: fade-in-up 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
+.hero-subtitle {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-caramel);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+}
 
-.header-title h1 {
-    font-size: 4.3rem;
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin: 0 0 1.5rem 0;
+    font-weight: 800;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
     margin: 0;
-    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-    font-weight: 900;
-    letter-spacing: 0.09em;
-    color: #fdf1d5;
-    line-height: 1.08;
-    z-index: 2;
-    text-shadow: 0 2px 12px #c1440e33, 0 1px 0 #e8d7bb;
-    background-clip: text;
-    animation: title-fade-in 1.2s cubic-bezier(.4,2,.6,1);
+    max-width: 500px;
 }
 
-@keyframes title-fade-in {
-    from { opacity: 0; transform: translateY(30px);}
-    to { opacity: 1; transform: translateY(0);}
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 4rem 2rem;
+    }
+    .hero-title {
+        font-size: 3.5rem;
+    }
 }

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const HeaderHook = () => {
     return (
-        <section className='header-hook-container'>
-            <h2>Fresh Blog Posts</h2>
-            <Link to="/blog" className="header-link"><h3>Read More</h3></Link>
-        </section>
+        <div className='latest-header'>
+            <h2 className="section-heading">Fresh From The Roaster</h2>
+            <Link to="/blog" className="view-all-link">View All Articles &rarr;</Link>
+        </div>
     );
 }
 

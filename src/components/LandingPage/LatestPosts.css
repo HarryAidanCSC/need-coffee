@@ -1,109 +1,97 @@
-.post-container {
-    /* Remove fixed height for flexibility and add padding */
-    width: 28rem;
+.latest-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article-preview-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 0;
-    /* Warmer gradient background */
-    background: linear-gradient(135deg, rgba(248,240,223,0.9), rgba(236,224,200,0.9));
-    border-radius: 1.5rem;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 1.5rem;
+    text-decoration: none;
+    group: article-card;
 }
 
-.post-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-}
-
-.post-container > img {
-    height: 18rem;
+.article-preview-image {
     width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.article-preview-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 1rem;
-    transition: filter 0.3s ease;
-    margin-bottom: 1rem;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.post-container > img:hover {
-    filter: brightness(1.1);
+.article-preview-card:hover .article-preview-image img {
+    transform: scale(1.05);
 }
 
-.outer-post-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem;
-    background: linear-gradient(135deg, #f8f1e4 0%, #e8d7bb 100%);
-    position: relative;    
-    z-index: 2;           
-}
-
-
-.post-container p {
-    font-size: 1rem;
-    line-height: 1.4;
-    letter-spacing: 0.03rem;
-    margin: 0.3rem 0;
-    color: #6d4c2c;
-}
-
-.post-container .ranking {
-    font-size: 1.08rem;
+.article-preview-type {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    color: #c1440e;
-    background: linear-gradient(90deg, #ffe0b2 60%, #fbeee0 100%);
-    border-radius: 1.2rem;
-    padding: 0.35rem 1.1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.2rem;
-    letter-spacing: 0.06em;
-    box-shadow: 0 2px 8px #e8d7bb44;
-    display: inline-block;
-    text-align: center;
+    letter-spacing: 0.1em;
+    font-family: var(--font-sans);
+    z-index: 2;
 }
 
-.post-container .post-type {
+.article-preview-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-preview-date {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.article-preview-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin: 0 0 1rem 0;
+    line-height: 1.25;
+    transition: color 0.3s ease;
+}
+
+.article-preview-card:hover .article-preview-title {
+    color: var(--accent-caramel);
+}
+
+.article-preview-excerpt {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+}
+
+.article-preview-read {
+    font-family: var(--font-sans);
     font-size: 0.9rem;
     font-weight: 600;
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 1rem;
+    color: var(--text-primary);
     text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05em;
+    margin-top: auto;
+    transition: color 0.3s ease;
 }
 
-.post-container h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0.5rem 0;
-    color: #a05a2c;
-}
-
-.post-container h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    margin-bottom: 0.5rem;
-    color: #b86b2b;
-}
-
-h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #a05a2c;
-    margin-bottom: 1.5rem;
-    text-align: center;
+.article-preview-card:hover .article-preview-read {
+    color: var(--accent-caramel);
 }
