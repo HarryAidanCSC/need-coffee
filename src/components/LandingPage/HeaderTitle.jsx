@@ -1,11 +1,13 @@
-import icon from './../../assets/icon.png'
 import './HeaderTitle.css'
 
 const HeaderTitle = () => {
     return (
-        <header className='header-title'>
-            <h1>Harry's Coffee Blog</h1>
-            <img src={icon} alt='coffee mug icon'/>
+        <header className='hero-section'>
+            <div className="hero-content">
+                <span className="hero-subtitle">The Official Journal</span>
+                <h1 className="hero-title">Harry's Coffee Blog.</h1>
+                <p className="hero-description">Discover the finest beans, master your home brewing technique, and explore top-rated coffee shops.</p>
+            </div>
         </header>
     )
 }

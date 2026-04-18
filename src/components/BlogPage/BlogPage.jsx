@@ -14,11 +14,12 @@ const BlogPage = () => {
     const [sortOrder, setSortOrder] = useState('desc');
 
     useEffect(() => {
-        // Set initial filter from navigation state
         if (location.state?.initialFilter) {
             setFilter(location.state.initialFilter);
         }
-    }, [location.state]);    useEffect(() => {
+    }, [location.state]);
+
+    useEffect(() => {
         fetch(`${import.meta.env.BASE_URL}Articles/all_articles.json`)
             .then(res => res.json())
             .then(data => {
@@ -31,26 +32,9 @@ const BlogPage = () => {
             });
     }, []);
 
-    const getTypeColor = (type) => {
-        switch (type?.toLowerCase()) {
-            case 'beans':
-                return '#f3392a';
-            case 'coffee shop':
-                return '#3498db';
-            case 'brewing':
-                return '#27ae60';
-            default:
-                return '#e74c3c';
-        }
-    };
-
     const filteredArticles = articles.filter(article => {
-        // Type filter
         const typeMatch = filter === 'all' || article.type?.toLowerCase() === filter;
-        
-        // Star filter
         const starMatch = starFilter === 'all' || article.ranking >= parseFloat(starFilter);
-        
         return typeMatch && starMatch;
     }).sort((a, b) => {
         if (sortBy === 'date') {
@@ -63,166 +47,117 @@ const BlogPage = () => {
         return 0;
     });
 
+    const truncate = (str, maxLength = 80) =>
+        str && str.length > maxLength ? str.slice(0, maxLength - 3) + "..." : str;
+
     if (loading) {
         return (
-            <>
+            <div className="page-wrapper">
                 <HeaderBoard />
                 <main className="blog-page">
-                    <div className="loading">Loading articles... ☕</div>
+                    <div className="loading-state">Loading the brew...</div>
                 </main>
                 <FooterBoard />
-            </>
+            </div>
         );
     }
 
     return (
-        <>
+        <div className="page-wrapper">
             <HeaderBoard />
             <main className="blog-page">
-                <h1 className="blog-title">All Coffee Articles</h1>
+                <header className="blog-header">
+                    <h1 className="blog-title">Journal</h1>
+                    <p className="blog-subtitle">Dive into the world of specialty coffee.</p>
+                </header>
                 
-                <div className="filters-container">
-                    <div className="filters-left">
-                        {/* Filter Buttons */}
-                        <div className="filter-section">
-                            <button 
-                                className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-                                onClick={() => setFilter('all')}
-                            >
-                                All Articles
-                            </button>
-                            <button 
-                                className={`filter-btn ${filter === 'coffee shop' ? 'active' : ''}`}
-                                onClick={() => setFilter('coffee shop')}
-                                style={{ '--btn-color': '#3498db' }}
-                            >
-                                ☕ Coffee Shops
-                            </button>
-                            <button 
-                                className={`filter-btn ${filter === 'beans' ? 'active' : ''}`}
-                                onClick={() => setFilter('beans')}
-                                style={{ '--btn-color': '#f3392a' }}
-                            >
-                                🫘 Beans
-                            </button>
-                            <button 
-                                className={`filter-btn ${filter === 'brewing' ? 'active' : ''}`}
-                                onClick={() => setFilter('brewing')}
-                                style={{ '--btn-color': '#27ae60' }}
-                            >
-                                ⚗️ Brewing
-                            </button>
-                        </div>
-
-                        {/* Star Rating Filter */}
-                        <div className="star-filter-section">
-                            <div className="star-filter-buttons">
+                <section className="blog-controls">
+                    <div className="control-group">
+                        <span className="control-label">Category:</span>
+                        <div className="filter-chips">
+                            {['all', 'beans', 'brewing', 'coffee shop'].map(f => (
                                 <button 
-                                    className={`star-filter-btn ${starFilter === 'all' ? 'active' : ''}`}
-                                    onClick={() => setStarFilter('all')}
+                                    key={f}
+                                    className={`filter-chip ${filter === f ? 'active' : ''}`}
+                                    onClick={() => setFilter(f)}
                                 >
-                                    All ⭐
+                                    {f === 'all' ? 'All' : f === 'coffee shop' ? 'Shops' : f.charAt(0).toUpperCase() + f.slice(1)}
                                 </button>
-                                <button 
-                                    className={`star-filter-btn ${starFilter === '3' ? 'active' : ''}`}
-                                    onClick={() => setStarFilter('3')}
-                                >
-                                    3+ ⭐⭐⭐
-                                </button>
-                                <button 
-                                    className={`star-filter-btn ${starFilter === '4' ? 'active' : ''}`}
-                                    onClick={() => setStarFilter('4')}
-                                >
-                                    4+ ⭐⭐⭐⭐
-                                </button>
-                                <button 
-                                    className={`star-filter-btn ${starFilter === '5' ? 'active' : ''}`}
-                                    onClick={() => setStarFilter('5')}
-                                >
-                                    Perfect 5 ⭐⭐⭐⭐⭐
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* Sort Options */}
-                        <div className="sort-section">
-                            <span className="filter-label">Sort by:</span>
-                            <div className="sort-buttons">
-                                <button 
-                                    className={`sort-btn ${sortBy === 'date' ? 'active' : ''}`}
-                                    onClick={() => setSortBy('date')}
-                                >
-                                    📅 Date
-                                </button>
-                                <button 
-                                    className={`sort-btn ${sortBy === 'rating' ? 'active' : ''}`}
-                                    onClick={() => setSortBy('rating')}
-                                >
-                                    ⭐ Rating
-                                </button>
-                                <button 
-                                    className={`sort-order-btn ${sortOrder === 'desc' ? 'active' : ''}`}
-                                    onClick={() => setSortOrder(sortOrder === 'desc' ? 'asc' : 'desc')}
-                                    title={`Sort ${sortOrder === 'desc' ? 'Ascending' : 'Descending'}`}
-                                >
-                                    {sortOrder === 'desc' ? '↓' : '↑'}
-                                </button>
-                            </div>
+                            ))}
                         </div>
                     </div>
-                    <div className="results-counter">
-                        Showing {filteredArticles.length} article{filteredArticles.length !== 1 ? 's' : ''}
-                        {filter !== 'all' && ` for "${filter}"`}
-                        {starFilter !== 'all' && ` with ${starFilter}+ stars`}
-                        <br />
-                        <small>Sorted by {sortBy} ({sortOrder === 'desc' ? 'newest/highest first' : 'oldest/lowest first'})</small>
-                    </div>
-                </div>
 
-                <div className="articles-grid">
-                    {filteredArticles.map(article => (
-                        <Link 
-                            key={article.uuid} 
-                            to={`/article/${article.uuid}`} 
-                            className="article-card"
-                        >                            {article.jpgFileName && (
-                                <img 
-                                    src={`${import.meta.env.BASE_URL}${article.jpgFileName}`} 
-                                    alt={article.alt} 
-                                    className="article-card-image"
-                                />
-                            )}
-                            <div className="article-card-content">
-                                <span 
-                                    className="article-card-type"
-                                    style={{ backgroundColor: getTypeColor(article.type) }}
+                    <div className="control-group">
+                        <span className="control-label">Rating:</span>
+                        <div className="filter-chips">
+                            {[
+                                { val: 'all', label: 'All Ratings' },
+                                { val: '3', label: '3+ Stars' },
+                                { val: '4', label: '4+ Stars' },
+                                { val: '5', label: 'Perfect 5' }
+                            ].map(star => (
+                                <button 
+                                    key={star.val}
+                                    className={`filter-chip ${starFilter === star.val ? 'active' : ''}`}
+                                    onClick={() => setStarFilter(star.val)}
                                 >
-                                    {article.type?.toUpperCase()}
-                                </span>
-                                <h2 className="article-card-title">{article.title}</h2>
-                                <p className="article-card-date">
-                                    {new Date(article.date).toLocaleDateString('en-GB', {
-                                        year: 'numeric',
-                                        month: 'long',
-                                        day: 'numeric'
-                                    })}
-                                </p>
-                                <div className="article-card-rating">
-                                    ⭐ {article.ranking}/5
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-
-                {filteredArticles.length === 0 && (
-                    <div className="no-results">
-                        No articles found for "{filter}" 😔
+                                    {star.label}
+                                </button>
+                            ))}
+                        </div>
                     </div>
-                )}
+
+                    <div className="control-group sort-group">
+                        <div className="sort-controls">
+                            <span className="control-label">Sort By:</span>
+                            <button className="sort-text-btn" onClick={() => {
+                                setSortOrder(sortOrder === 'desc' ? 'asc' : 'desc');
+                                setSortBy('date');
+                            }}>
+                                Date {sortBy === 'date' && (sortOrder === 'desc' ? '↓' : '↑')}
+                            </button>
+                            <span className="separator">/</span>
+                            <button className="sort-text-btn" onClick={() => {
+                                setSortOrder(sortOrder === 'desc' ? 'asc' : 'desc');
+                                setSortBy('rating');
+                            }}>
+                                Rating {sortBy === 'rating' && (sortOrder === 'desc' ? '↓' : '↑')}
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="blog-results">
+                    {filteredArticles.length === 0 ? (
+                        <div className="empty-state">
+                            <p>No articles found for these filters. Try broadening your search.</p>
+                        </div>
+                    ) : (
+                        <div className="latest-posts-grid">
+                            {filteredArticles.map(article => (
+                                <Link to={`/article/${article.uuid}`} key={article.uuid} className='article-preview-card'>
+                                    <div className="article-preview-image">
+                                        <img src={`${import.meta.env.BASE_URL}${article.jpgFileName}`} alt={article.alt} />
+                                        <span className="article-preview-type">{article.type?.toUpperCase()}</span>
+                                    </div>
+                                    <div className="article-preview-content">
+                                        <span className="article-preview-date">
+                                            {new Date(article.date).toLocaleDateString('en-GB', {
+                                                year: 'numeric', month: 'long', day: 'numeric'
+                                            })}
+                                        </span>
+                                        <h3 className="article-preview-title">{article.title || article.quick_title}</h3>
+                                        <p className="article-preview-excerpt">{truncate(article.text || article.markdownText, 100)}</p>
+                                        <span className="article-preview-read">Read Article &rarr;</span>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    )}
+                </section>
             </main>
             <FooterBoard />
-        </>
+        </div>
     );
 };
 

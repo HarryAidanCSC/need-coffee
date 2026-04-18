@@ -13,32 +13,31 @@ const HeaderTopics = () => {
         navigate('/blog', { state: { initialFilter: filterType } });
     };
 
-    const assets = {
-    bean: { name: "The Best Beans", icon: bean, alt: "coffee bean", text: "Click here to find my favourite beans for you to try", onClick: () => navigateToBlog('beans')},
-    asset2: { name: "Brewing", icon: aeropress, alt: "aeropress device", text: "Click here for the best brewing methods at home!", onClick: () => navigateToBlog('brewing')},
-    asset3: { name: "Favourite Coffee Shops", icon: cup, alt: "coffee mug", text: "Click here for my best recommendations!", onClick: () => navigateToBlog('coffee shop')},
-    asset4: { name: "Favourite Coffee Brands", icon: brewer, alt: "coffee filter", text: "Click here for some hot takes!", onClick: preventDefault}
-    };
-    
-    function TopicButton({ name, icon, alt, text, onClick }) {
+    const categories = [
+        { id: 'beans', name: "The Best Beans", icon: bean, alt: "Coffee bean", desc: "Discover my favourite beans for you to try.", onClick: () => navigateToBlog('beans') },
+        { id: 'brewing', name: "Brewing Methods", icon: aeropress, alt: "Aeropress", desc: "Master the best brewing methods at home.", onClick: () => navigateToBlog('brewing') },
+        { id: 'shops', name: "Coffee Shops", icon: cup, alt: "Coffee mug", desc: "Explore my top recommendations worldwide.", onClick: () => navigateToBlog('coffee shop') },
+        { id: 'brands', name: "Favourite Brands", icon: brewer, alt: "Coffee filter", desc: "Hot takes and honest reviews.", onClick: preventDefault }
+    ];
+
     return (
-        <button onClick={onClick || preventDefault} className='topic-container'>
-            <img src={icon} alt={alt} />
-            <h3>{name}</h3>
-            <p>{text}</p>
-        </button>
+        <div className="categories-container">
+            <h2 className="section-heading">Explore by Category</h2>
+            <div className="categories-grid">
+                {categories.map((cat) => (
+                    <button key={cat.id} className="category-card" onClick={cat.onClick}>
+                        <div className="category-icon-wrapper">
+                            <img src={cat.icon} alt={cat.alt} />
+                        </div>
+                        <div className="category-content">
+                            <h3>{cat.name}</h3>
+                            <p>{cat.desc}</p>
+                        </div>
+                    </button>
+                ))}
+            </div>
+        </div>
     );
-    }
-
-
-    return (
-        <section className='outer-topic-container'>
-            {Object.entries(assets).map(([key, { name, icon, alt, text, onClick }]) => (
-            <TopicButton key={key} name={name} icon={icon} alt={alt} text={text} onClick={onClick}/>
-            ))}
-        </section>
-    )
 }
 
-
-export default HeaderTopics
+export default HeaderTopics;
